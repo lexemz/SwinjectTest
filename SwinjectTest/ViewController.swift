@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func goButtonPressed(_ sender: Any) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController")
+        guard let secondVC = viewController as? SecondViewController else { return }
+        
+        present(secondVC, animated: true)
+    }
 }
 
